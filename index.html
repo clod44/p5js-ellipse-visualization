@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>p5js ellipse 1</title>
+</head>
+<body>
+    <div id="page">
+        <div id="sketch-options-container">
+            <div style="display:flex; flex-direction: row; justify-content: center;">
+                <h2 id="title">Ellipse</h2>
+                <a href="https://github.com/clod44/p5js-ellipse-visualization">
+                    <img class="icon" src="github.png" alt="source code">
+                </a>
+            </div>
+            
+            <div style="overflow: scroll;">
+                <p class="explanation-labels">ellipse formula:</p>
+                <img src="1.png" class="explanation-images">
+                <img src="2.png" class="explanation-images">
+
+                <!-- a -->
+                <div class="range-container"> 
+                    <label for="el-a">a:</label>
+                    <input type ="range" max="100" min="0"
+                    oninput="document.getElementById('label-el-a').innerHTML = this.value;"
+                    step="1" name="el-a" id="el-a" value="410"></input>
+                    <label id="label-el-a" style="font-style: normal;">410</label>
+                </div>
+                <!-- b -->
+                <div class="range-container"> 
+                    <label for="el-b">b:</label>
+                    <input type ="range" max="100" min="0"
+                    oninput="document.getElementById('label-el-b').innerHTML = this.value;"
+                    step="1" name="el-b" id="el-b" value="295"></input>
+                    <label id="label-el-b" style="font-style: normal;">295</label>
+                </div>
+                <!-- k -->
+                <div class="range-container"> 
+                    <label for="el-k">k:</label>
+                    <input type ="range" max="100" min="0"
+                    oninput="document.getElementById('label-el-k').innerHTML = this.value;"
+                    step="1" name="el-k" id="el-k" value="0"></input>
+                    <label id="label-el-k" style="font-style: normal;">0</label>
+                </div>
+                <!-- h -->
+                <div class="range-container" style="margin-bottom: 20px;"> 
+                    <label for="el-h">h:</label>
+                    <input type ="range" max="100" min="0"
+                    oninput="document.getElementById('label-el-h').innerHTML = this.value;"
+                    step="1" name="el-h" id="el-h" value="0"></input>
+                    <label id="label-el-h" style="font-style: normal;">0</label>
+                </div>
+            
+                <p class="explanation-labels">Focus points:</p>
+                <img src="3.png" class="explanation-images">
+                <img src="4.png" class="explanation-images">
+                <img src="5.png" class="explanation-images">
+                <p class="explanation-labels">Area:</p>
+                <img src="6.png" class="explanation-images">
+                <p class="explanation-labels">Circumference:</p>
+                <img src="7.png" class="explanation-images">
+            </div>
+        </div>
+            
+        <div id="sketch-canvas-container">
+            <!--p5js canvas here-->
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>  
+    <script src="sketch.js"></script>  
+</body>
+</html>
